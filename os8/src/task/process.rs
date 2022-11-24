@@ -31,7 +31,7 @@ pub struct ProcessControlBlockInner {
     pub semaphore_list: Vec<Option<Arc<Semaphore>>>,
     pub condvar_list: Vec<Option<Arc<Condvar>>>,
 
-    pub _edeadlock_detnable: bool,
+    pub deadlock_det_enable: bool,
     pub mutex_available: Vec<i32>,
     pub semaphore_available: Vec<i32>,
     pub mutex_allocation: Vec<Vec<i32>>,
